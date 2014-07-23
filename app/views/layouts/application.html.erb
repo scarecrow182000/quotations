@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-Search:<input type="text" ><input type="submit" value="Submit"><br>
 <%= form_tag(search_path, {class: "search-bar", method: :get}) do %>
 <%= text_field_tag :body, params[:body], placeholder: 'Search Me', class: "form-control input-lg"%>
 <% end %>
