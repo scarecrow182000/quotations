@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotations</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+Search:<input type="text" ><input type="submit" value="Submit"><br>
+<%= form_tag(search_path, {class: "search-bar", method: :get}) do %>
+<%= text_field_tag :body, params[:body], placeholder: 'Search Me', class: "form-control input-lg"%>
+<% end %>
+
+
+
+<%= yield %>
+
+</body>
+</html>
